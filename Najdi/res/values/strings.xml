@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Najdi</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="kopceDodadi">Додади</string>
+    <string name="kopceListaj">Листај</string>
+    <string name="labelaIme">Име</string>
+    <string name="labelaOpis">Опис</string>
+    <string name="labelaKategorija">Категорија</string>
+    <string name="labelaSlika">Слика</string>
+    <string-array name="kategorii">
+        <item>Храна</item>
+        <item>Забава</item>
+        <item>Разно</item>
+        <item>Превоз</item>
+        <item>Храна</item>
+        <item>Забава</item>
+        <item>Разно</item>
+        <item>Превоз</item>
+        <item>Храна</item>
+        <item>Забава</item>
+        <item>Разно</item>
+        <item>Превоз</item>
+    </string-array>
+    
+
+</resources>

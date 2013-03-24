@@ -1,0 +1,60 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+	<RelativeLayout 
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingBottom="@dimen/activity_vertical_margin"
+    	android:paddingLeft="@dimen/activity_horizontal_margin"
+    	android:paddingRight="@dimen/activity_horizontal_margin"
+    	android:paddingTop="@dimen/activity_vertical_margin"
+    	tools:context=".Vnes" >
+	
+	    <TextView
+        android:id="@+id/tvImeDetali"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+  
+    	<TextView
+        android:id="@+id/tvOpisDetali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvImeDetali"
+        android:layout_below="@+id/tvImeDetali"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@android:attr/textAppearanceMedium" />
+    	
+    	<ImageView
+        android:id="@+id/imgSlikaDetali"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvOpisDetali"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/tvOpisDetali" />
+    	
+    	<Button
+        android:id="@+id/btnMapa"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/imgSlikaDetali"
+        android:onClick="btnMapa_Clicked"
+        android:text="Мапа" />
+    	
+    	<ProgressBar
+        android:id="@+id/pbLoading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+    
+	</RelativeLayout>
+</ScrollView>
