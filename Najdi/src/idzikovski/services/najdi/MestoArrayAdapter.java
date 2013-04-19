@@ -1,5 +1,7 @@
 package idzikovski.services.najdi;
 
+import java.util.ArrayList;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -11,9 +13,9 @@ import android.view.LayoutInflater;
 public class MestoArrayAdapter extends ArrayAdapter<Mesto> {
 	
 	private Activity context;
-	private Mesto[] values;
+	private ArrayList <Mesto> values;
 	
-	public MestoArrayAdapter(Activity context, Mesto[] values){
+	public MestoArrayAdapter(Activity context, ArrayList <Mesto> values){
 		super(context, R.layout.rowlayout, values);
 		this.context=context;
 		this.values=values;
@@ -35,7 +37,7 @@ public class MestoArrayAdapter extends ArrayAdapter<Mesto> {
 		
 		
 		ListViewHolder holder=(ListViewHolder)rowView.getTag();
-		String ime=values[position].getIme();
+		String ime=values.get(position).getIme();
 		holder.ime.setText(ime);
 		
 		return rowView;

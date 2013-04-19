@@ -7,25 +7,27 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class NajdiOpenHelper extends SQLiteOpenHelper {
 
 	
-	private static final String COLUMN_ID="mesto_id";
-	private static final String COLUMN_IME="ime";
-	private static final String COLUMN_OPIS="opis";
-	private static final String COLUMN_KATEGORIJA="kategorija";
-	private static final String COLUMN_KOORDINATAX="koordinatax";
-	private static final String COLUMN_KOORDINATAY="koordinatay";
-	private static final String COLUMN_SLIKA="slika";
+	public static final String COLUMN_ID="mesto_id";
+	public static final String COLUMN_IME="ime";
+	public static final String COLUMN_OPIS="opis";
+	public static final String COLUMN_KATEGORIJA="kategorija";
+	public static final String COLUMN_KOORDINATAX="koordinatax";
+	public static final String COLUMN_KOORDINATAY="koordinatay";
+	public static final String COLUMN_SLIKA="slika";
 	
-	private static final int DATABASE_VERSION = 2;
+	private static final int DATABASE_VERSION = 3;
 	private static final String DATABASE_NAME="Najdi.db";
-	private static final String TABLE_NAME="Mesto";
-	private static final String DATABASE_CREATE = String.format("create table %s (%s integer primary key autoincrement, "+
-	"%s text not null, %s text not null, %s integer not null, %s double not null, $s double not null, %s text not null  ",
+	public static final String TABLE_NAME="Mesto";
+	private static final String DATABASE_CREATE = String.format("create table %s ( %s integer primary key autoincrement, "+
+	"%s text not null, %s text not null, %s integer not null, %s double not null, $s double not null, %s text not null) ",
 	TABLE_NAME,COLUMN_ID,COLUMN_IME,COLUMN_OPIS,COLUMN_KATEGORIJA,COLUMN_KOORDINATAX,COLUMN_KOORDINATAY,COLUMN_SLIKA);
+	String create="create table mesto (mesto_id integer primary key autoincrement, ime text not null, opis text not null, kategorija integer not null, "+
+	"koordinatax real not null, koordinatay real not null, slika text not null)";
 	
 	
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL(DATABASE_CREATE);		
+		db.execSQL(create);		
 	}
 	
 	NajdiOpenHelper(Context context){

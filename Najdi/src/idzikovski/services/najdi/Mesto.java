@@ -36,8 +36,18 @@ public class Mesto implements Parcelable {
 		this.kategorija=kategorija;
 		this.koordinatax=koordinatax;
 		this.koordinatay=koordinatay;
+		this.slika=slika;
 	}
 	
+	public Mesto(){
+		this.mesto_id=0;
+		this.ime="";
+		this.opis="";
+		this.kategorija=0;
+		this.koordinatax=0;
+		this.koordinatay=0;
+		this.slika="";
+	}
 
 	public Mesto(Parcel source) {
 		// TODO Auto-generated constructor stub
