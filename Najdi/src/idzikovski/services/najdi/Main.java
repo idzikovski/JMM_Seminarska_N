@@ -60,12 +60,8 @@ public class Main extends Activity {
 		sega=new DateTime().now();
 		SharedPreferences settings=getSharedPreferences(PREFS_NAME, 0);
 		dateBuf=settings.getString("lastUpdate", "def");
+
 		
-		IntentFilter filter=new IntentFilter(GetAllMestaTask.ITEMS_DOWNLOADED_ACTION);
-		registerReceiver(new OnDownloadReceiver(), filter);
-		startService(new Intent(this, DownloadService.class));
-		
-/*
 		if (dateBuf.equals("def"))
 		{
 			IntentFilter filter=new IntentFilter(GetAllMestaTask.ITEMS_DOWNLOADED_ACTION);
@@ -88,8 +84,7 @@ public class Main extends Activity {
 				startService(new Intent(this, DownloadService.class));
 			}
 		}
-		
-	*/	
+	
 		new KategoriiTask().execute();
 		setContentView(R.layout.activity_main);
 		btnListaj=(Button) findViewById(R.id.btnListaj);
